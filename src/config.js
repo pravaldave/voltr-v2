@@ -1,2 +1,2 @@
-export const API_BASE = "http://localhost:8000";
-export const USER_ID = "praval_test_account";
+export const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000';
+export const USER_ID = 'praval-default';
