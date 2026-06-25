@@ -88,7 +88,7 @@ function PriceChart({ history, period, setPeriod, selected, fxRates, displayCurr
         </div>
       </div>
       <ReactApexChart
-        key={`${selected}-${period}-${displayCurrency}`}
+  key={`chart-${selected}-${period}-${displayCurrency}`}
         type="candlestick"
         series={[{ data: seriesData }]}
         options={options}
