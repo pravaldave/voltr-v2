@@ -307,9 +307,9 @@ export default function Explore() {
       <div style={{ marginBottom: 28 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
           <div style={{ width: 3, height: 18, background: '#111', borderRadius: 2 }} />
-          <span style={{ fontSize: 10, fontWeight: 700, color: '#16a34a', textTransform: 'uppercase', letterSpacing: '3px' }}>
-            Markets · 03
-          </span>
+          <span style={{ fontSize: 10, fontWeight: 700, color: '#E85D04', textTransform: 'uppercase', letterSpacing: '3px' }}>
+  Markets · 03
+</span>
         </div>
         <h1 style={{ fontSize: 34, fontWeight: 900, color: '#111', letterSpacing: '-1.5px', marginBottom: 4 }}>Explore</h1>
         <p style={{ fontSize: 13, color: '#aaa' }}>Search any stock, crypto, commodity or forex pair</p>
