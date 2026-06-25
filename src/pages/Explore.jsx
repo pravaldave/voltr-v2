@@ -68,7 +68,7 @@ function PriceChart({ history, period, setPeriod, selected, fxRates, displayCurr
     xaxis: { type: 'datetime', labels: { style: { colors: '#aaa', fontSize: '11px' }, datetimeUTC: false }, axisBorder: { color: '#f0ede8' }, axisTicks: { color: '#f0ede8' } },
     yaxis: { tooltip: { enabled: true }, labels: { style: { colors: '#aaa', fontSize: '11px' }, formatter: v => v?.toLocaleString(undefined, { maximumFractionDigits: 2 }) } },
     grid: { borderColor: '#f0ede8' },
-    plotOptions: { candlestick: { colors: { upward: '#E85D04', downward: '#c0392b' }, wick: { useFillColor: true } } },
+    plotOptions: { candlestick: { colors: { upward: '#16a34a', downward: '#c0392b' }, wick: { useFillColor: true } } },
     tooltip: { theme: 'light', x: { format: 'dd MMM yyyy' } },
   };
 
@@ -263,10 +263,7 @@ export default function Explore() {
   }, []);
 
   useEffect(() => {
-    fetch('https://api.exchangerate-api.com/v4/latest/USD')
-      .then(r => r.json())
-      .then(d => setFxRates({ USD: 1, ...(d.rates || {}) }))
-      .catch(() => setFxRates({ USD: 1, INR: 84.5, EUR: 0.92, GBP: 0.79, JPY: 149.5, AED: 3.67, SGD: 1.34, AUD: 1.53 }));
+    setFxRates({ USD: 1, INR: 84.5, EUR: 0.92, GBP: 0.79, JPY: 149.5, AED: 3.67, SGD: 1.34, AUD: 1.53 });
   }, []);
 
   useEffect(() => {

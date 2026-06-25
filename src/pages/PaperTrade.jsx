@@ -49,7 +49,7 @@ function TradeChart({ symbol, period, setPeriod }) {
     xaxis: { type: 'datetime', labels: { style: { colors: '#aaa', fontSize: '10px' }, datetimeUTC: false } },
     yaxis: { labels: { style: { colors: '#aaa', fontSize: '10px' }, formatter: v => v?.toLocaleString('en-IN', { maximumFractionDigits: 2 }) } },
     grid: { borderColor: '#f0ede8' },
-    plotOptions: { candlestick: { colors: { upward: '#E85D04', downward: '#c0392b' }, wick: { useFillColor: true } } },
+    plotOptions: { candlestick: { colors: { upward: '#16a34a', downward: '#c0392b' }, wick: { useFillColor: true } } },
     tooltip: { theme: 'light', x: { format: 'dd MMM yy HH:mm' } },
   };
 
