@@ -67,7 +67,7 @@ function TradeChart({ symbol, period, setPeriod }) {
           ))}
         </div>
       </div>
-      <ReactApexChart key={`${symbol}-${period}`} type="candlestick" series={[{ data: seriesData }]} options={options} height={260} />
+      <ReactApexChart key={`chart-${symbol}-${period}`} type="candlestick" series={[{ data: seriesData }]} options={options} height={260} />
     </div>
   );
 }
