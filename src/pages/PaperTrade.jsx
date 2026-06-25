@@ -45,7 +45,6 @@ function TradeChart({ symbol, period, setPeriod }) {
 
   const options = {
     chart: { type: 'candlestick', background: 'transparent', toolbar: { show: false }, animations: { enabled: false } },
-    theme: { mode: 'light' },
     xaxis: { type: 'datetime', labels: { style: { colors: '#aaa', fontSize: '10px' }, datetimeUTC: false } },
     yaxis: { labels: { style: { colors: '#aaa', fontSize: '10px' }, formatter: v => v?.toLocaleString('en-IN', { maximumFractionDigits: 2 }) } },
     grid: { borderColor: '#f0ede8' },
