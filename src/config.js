@@ -1,2 +1,2 @@
-export const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:8000';
+export const API_BASE = 'https://voltr-api.onrender.com';
 export const USER_ID = 'praval-default';
