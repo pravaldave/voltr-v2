@@ -132,7 +132,7 @@ function RSIChart({ rsi, dates }) {
   if (!rsi || !dates) return null;
   const data    = dates.map((d, i) => ({ date: typeof d === 'number' ? new Date(d * 1000).toISOString().slice(0, 10) : d, rsi: rsi[i] }));
   const current = rsi.filter(Boolean).slice(-1)[0];
-  const color   = current > 70 ? '#c0392b' : current < 30 ? '#E85D04' : '#555';
+  const color   = current > 70 ? '#c0392b' : current < 30 ? '#16a34a' : '#555';
   return (
     <div style={{ ...card, padding: 20 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
@@ -145,7 +145,7 @@ function RSIChart({ rsi, dates }) {
           <YAxis domain={[0, 100]} tick={{ fontSize: 10, fill: '#bbb' }} width={26} />
           <Tooltip contentStyle={{ background: '#fff', border: '1px solid #f0ede8', borderRadius: 8 }} labelStyle={{ color: '#aaa', fontSize: 11 }} formatter={v => [v?.toFixed(1), 'RSI']} />
           <ReferenceLine y={70} stroke="#c0392b" strokeDasharray="3 3" />
-          <ReferenceLine y={30} stroke="#E85D04" strokeDasharray="3 3" />
+          <ReferenceLine y={30} stroke="#16a34a" strokeDasharray="3 3" />
           <Line type="monotone" dataKey="rsi" stroke="#111" dot={false} strokeWidth={1.5} />
         </LineChart>
       </ResponsiveContainer>
@@ -174,7 +174,7 @@ function MACDChart({ macd, dates }) {
           <Tooltip contentStyle={{ background: '#fff', border: '1px solid #f0ede8', borderRadius: 8 }} labelStyle={{ color: '#aaa', fontSize: 11 }} />
           <ReferenceLine y={0} stroke="#f0ede8" />
           <Line type="monotone" dataKey="macd"   stroke="#111"    dot={false} strokeWidth={1.5} name="MACD" />
-          <Line type="monotone" dataKey="signal" stroke="#E85D04" dot={false} strokeWidth={1.5} name="Signal" />
+          <Line type="monotone" dataKey="signal" stroke="#16a34a" dot={false} strokeWidth={1.5} name="Signal" />
         </LineChart>
       </ResponsiveContainer>
     </div>
@@ -307,7 +307,7 @@ export default function Explore() {
       <div style={{ marginBottom: 28 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
           <div style={{ width: 3, height: 18, background: '#111', borderRadius: 2 }} />
-          <span style={{ fontSize: 10, fontWeight: 700, color: '#E85D04', textTransform: 'uppercase', letterSpacing: '3px' }}>
+          <span style={{ fontSize: 10, fontWeight: 700, color: '#16a34a', textTransform: 'uppercase', letterSpacing: '3px' }}>
             Markets · 03
           </span>
         </div>
