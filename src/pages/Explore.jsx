@@ -67,7 +67,7 @@ function PriceChart({ history, period, setPeriod, selected, fxRates, displayCurr
     xaxis: { type: 'datetime', labels: { style: { colors: '#aaa', fontSize: '11px' }, datetimeUTC: false }, axisBorder: { color: '#f0ede8' }, axisTicks: { color: '#f0ede8' } },
     yaxis: { tooltip: { enabled: true }, labels: { style: { colors: '#aaa', fontSize: '11px' }, formatter: v => v?.toLocaleString(undefined, { maximumFractionDigits: 2 }) } },
     grid: { borderColor: '#f0ede8' },
-    plotOptions: { candlestick: { colors: { upward: '#16a34a', downward: '#c0392b' }, wick: { useFillColor: true } } },
+    plotOptions: { candlestick: { colors: { upward: '#16a34a', downward: '#ef4444' }, wick: { useFillColor: true } } },
     tooltip: { theme: 'light', x: { format: 'dd MMM yyyy' } },
   };
 
