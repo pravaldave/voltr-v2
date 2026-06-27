@@ -332,43 +332,34 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div style={{
-        display: 'flex', height: '100vh', overflow: 'hidden',
-        background: '#fafaf8',
-        color: '#111',
-        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-        position: 'relative',
-      }}>
-
-
-        {/* App layout */}
-        <AppWithRouter currency={currency} setCurrency={setCurrency} />
-      </div>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/*" element={
+          <div style={{
+            display: 'flex', height: '100vh', overflow: 'hidden',
+            background: '#fafaf8', color: '#111',
+            fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+          }}>
+            <Sidebar currency={currency} setCurrency={setCurrency} />
+            <main style={{
+              flex: 1, overflowY: 'auto', position: 'relative', zIndex: 2,
+              background: '#fafaf8',
+              scrollbarWidth: 'thin',
+              scrollbarColor: '#ede9e4 transparent',
+            }}>
+              <PageWrapper>
+                <Routes>
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/portfolio" element={<Portfolio />} />
+                  <Route path="/explore"   element={<Explore />} />
+                  <Route path="/paper"     element={<PaperTrade />} />
+                  <Route path="/alerts"    element={<Alerts />} />
+                </Routes>
+              </PageWrapper>
+            </main>
+          </div>
+        } />
+      </Routes>
     </BrowserRouter>
-  );
-}
-
-function AppWithRouter({ currency, setCurrency }) {
-  return (
-    <>
-      <Sidebar currency={currency} setCurrency={setCurrency} />
-      <main style={{
-        flex: 1, overflowY: 'auto', position: 'relative', zIndex: 2,
-        background: '#fafaf8',
-        scrollbarWidth: 'thin',
-        scrollbarColor: '#ede9e4 transparent',
-      }}>
-        <PageWrapper>
-          <Routes>
-            <Route path="/"          element={<Landing />}    />
-<Route path="/dashboard" element={<Dashboard />}  />
-            <Route path="/portfolio" element={<Portfolio />}  />
-            <Route path="/explore"   element={<Explore />}    />
-            <Route path="/paper"     element={<PaperTrade />} />
-            <Route path="/alerts"    element={<Alerts />}     />
-          </Routes>
-        </PageWrapper>
-      </main>
-    </>
   );
 }
