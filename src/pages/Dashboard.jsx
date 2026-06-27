@@ -3,6 +3,7 @@ import axios from 'axios';
 import { TrendingUp, TrendingDown, Zap } from 'lucide-react';
 import { API_BASE } from '../config';
 
+console.log('API_BASE:', process.env.REACT_APP_API_BASE);
 const card = {
   background: '#ffffff',
   border: '1px solid #f0ede8',

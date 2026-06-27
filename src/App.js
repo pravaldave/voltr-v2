@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router
 import { LayoutDashboard, Briefcase, TrendingUp, BookOpen, Zap, Activity } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 import Dashboard  from './pages/Dashboard';
+import Landing    from './pages/landing';
+import Landing    from './pages/landing';
 import Portfolio  from './pages/Portfolio';
 import Explore    from './pages/Explore';
 import PaperTrade from './pages/PaperTrade';
@@ -9,7 +11,7 @@ import Alerts     from './pages/Alerts';
 import { useCurrency, CURRENCIES } from './context/CurrencyContext';
 
 const nav = [
-  { to: '/',          icon: LayoutDashboard, label: 'Dashboard',   tag: '01' },
+  { to: '/dashboard', icon: LayoutDashboard, label: 'Dashboard',   tag: '01' },
   { to: '/portfolio', icon: Briefcase,       label: 'Portfolio',   tag: '02' },
   { to: '/explore',   icon: TrendingUp,      label: 'Explore',     tag: '03' },
   { to: '/paper',     icon: BookOpen,        label: 'Paper Trade', tag: '04' },
@@ -359,7 +361,8 @@ function AppWithRouter({ currency, setCurrency }) {
       }}>
         <PageWrapper>
           <Routes>
-            <Route path="/"          element={<Dashboard />}  />
+            <Route path="/"          element={<Landing />}    />
+<Route path="/dashboard" element={<Dashboard />}  />
             <Route path="/portfolio" element={<Portfolio />}  />
             <Route path="/explore"   element={<Explore />}    />
             <Route path="/paper"     element={<PaperTrade />} />

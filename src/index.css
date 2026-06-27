@@ -86,3 +86,8 @@ body {
   color: #111;
   background: #fafaf8;
 }
+.apexcharts-candlestick-area path[fill="#E85D04"],
+.apexcharts-candlestick-area path[fill="#FF6600"],
+.apexcharts-candlestick-area path[fill="rgba(232,93,4,0.85)"] {
+  fill: #16a34a !important;
+}
