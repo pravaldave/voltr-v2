@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
-import { LayoutDashboard, Briefcase, TrendingUp, BookOpen, Zap, Activity } from 'lucide-react';
+import { LayoutDashboard, Briefcase, TrendingUp, BookOpen, Zap, Activity, X } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 import Dashboard  from './pages/Dashboard';
-import Landing    from './pages/landing';
 import Landing    from './pages/landing';
 import Portfolio  from './pages/Portfolio';
 import Explore    from './pages/Explore';
