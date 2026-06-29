@@ -16,7 +16,9 @@ window.onunhandledrejection = (event) => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <CurrencyProvider>
-    <App />
-  </CurrencyProvider>
+  <AuthProvider>
+    <CurrencyProvider>
+      <App />
+    </CurrencyProvider>
+  </AuthProvider>
 );
